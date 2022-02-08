@@ -1,0 +1,65 @@
+*, *::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+body, html {
+    line-height: 1;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #252b42;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    width: 50%;
+}
+
+td, th {
+    border: 2px solid rgb(190, 190, 190);
+    padding: 5px;
+}
+
+th {
+    background-color: rgb(250, 250, 250);
+}
+
+td {
+    text-align: center  ;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(250, 250, 250);
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(245, 245, 245);
+}
+
+
+.about {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 32px;
+    text-align: center;
+}
