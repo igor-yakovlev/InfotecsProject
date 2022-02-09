@@ -13,6 +13,7 @@ body, html {
     font-size: 16px;
     font-weight: 500;
     color: #252b42;
+    padding: 50px;
 }
 
 a {
@@ -38,6 +39,8 @@ td, th {
 
 th {
     background-color: rgb(250, 250, 250);
+    cursor: pointer;
+    white-space: nowrap;
 }
 
 td {
