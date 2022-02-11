@@ -1,3 +1,4 @@
+/* Обнуление */
 *, *::before,
 *::after {
     box-sizing: border-box;
@@ -10,7 +11,7 @@
 body, html {
     line-height: 1;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     color: #252b42;
     padding: 50px;
@@ -25,6 +26,13 @@ ul, ol, li {
     list-style: none;
 }
 
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Таблица*/
 table {
     border-collapse: collapse;
     border: 2px solid rgb(200, 200, 200);
@@ -63,6 +71,57 @@ tr:nth-child(odd) {
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 32px;
+    height: 36px;
     text-align: center;
+}
+
+/* Форма */
+
+
+
+.form {
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgb(190, 190, 190);
+    box-shadow: 4px 4px 30px 2px rgba(34, 60, 80, 0.11);    
+}
+
+.form__input {
+    height: 50px;
+    width: 30%;
+    margin-bottom: 20px;
+    font-family: inherit;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.form__input:last-of-type {
+    margin-bottom: 0;
+}
+
+.form__out-area {
+    margin: 10px 0;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 5px;
+    min-width: 400px;
+}
+
+.form__button {
+    margin: 10px 0;
+    display: block;
+    width: 140px;
+    height: 40px;
+    border-radius: 4px;
+    box-shadow: 4px 4px 30px 2px rgba(34, 60, 80, 0.11);
+    background-color: rgb(160, 160, 160);
+    border: none;
+}
+
+.form__button:hover {
+    background-color: rgb(200, 200, 200);
 }
