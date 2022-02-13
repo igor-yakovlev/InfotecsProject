@@ -11,16 +11,19 @@
     <div class="wrapper">
       <table id="table"></table>
       
-        <form action="form" class="form" id="formDat">
+        <form class="form hide" name="userForm" >
           <input id="firstName" name="firstName" type="text" class="form__input" placeholder="firstName"/>
           <input id="lastName" name="lastName" type="text" class="form__input" placeholder="lastName" />
-          <input id="eyeColor" type="color" class="form__input" placeholder="eye Color" />
+          <input id="eyeColor" name="eyeColor" type="text" class="form__input" placeholder="eye Color" />
           <textarea id="about" name="about" id="" cols="30" rows="10" class="form__out-area"></textarea>
           <button class="form__button" type="submit">Send</button>
         </form>
-
-    </div>
+      
     
+    </div>
+    <div class="pagin">
+      
+    </div>
     
     <script src="./js/index.js"></script>
   </body>
