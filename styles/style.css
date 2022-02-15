@@ -13,8 +13,7 @@ body, html {
     font-family: 'Roboto','Times New Roman', Times, serif;
     font-size: 18px;
     font-weight: 400;
-    color: #252b42;
-    padding: 50px;
+    color: #000000;
     
 }
 
@@ -27,21 +26,52 @@ ul, ol, li {
     list-style: none;
 }
 
-.wrapper {
+
+/*Контейнер всей страницы*/
+.page__container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    padding: 50px;
+
+}
+
+/*Обертка для контейнера пагинации и таблицы*/
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    padding: 30px 10px;
+    border-radius: 10px;
 }
 
 /* Таблица*/
 table {
     border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
+    border: 2px solid rgb(189, 179, 179);;
     letter-spacing: 1px;
-    width: 50%;
-    
+    margin-bottom: 20px;
+
 }
 
+.table__text-wrapper {
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: 36px;
+    text-align: left;
+}
+
+.table__color-wrapper {
+    width: 80px;
+    height: 25px;
+}
+/*Стили для элементов таблицы*/
 td, th {
     border: 2px solid rgb(190, 190, 190);
     padding: 5px;
@@ -61,20 +91,7 @@ tr {
     cursor: pointer;
 }
 
-.about {
-    text-align: left;
-    /* display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: 36px;
-    text-align: center; */
-}
-
 /* Форма */
-
 
 .form {
     border-radius: 5px;
@@ -83,8 +100,9 @@ tr {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    background-color: rgb(190, 190, 190);
-    box-shadow: 4px 4px 30px 2px rgba(34, 60, 80, 0.11);    
+    background-color: rgb(189, 179, 179);
+    box-shadow: 4px 4px 30px 2px rgba(34, 60, 80, 0.11);
+    margin-right: 100px;
 }
 
 .form__input {
@@ -92,8 +110,9 @@ tr {
     width: 30%;
     margin-bottom: 20px;
     font-family: inherit;
-    font-size: 18px;
+    font-size: inherit;
     padding: 5px;
+    border-radius: 5px;
 }
 
 
@@ -115,6 +134,9 @@ tr {
     box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
     background-color: rgb(140, 140, 140);
     border: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
 }
 
 .form__button:hover {
@@ -125,19 +147,18 @@ tr {
     box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
 }
 
-
+/*Доп классы */
 .active {
-    background-color: rgb(150, 150, 150);
+    background-color: rgb(140, 140, 140);
 }
 
 .hide {
     display: none;
 }
 
-.pagin {
-    position: absolute;
-    top: 620px;
-    left: 25%;
+
+/*Пагинация*/
+.pagination__container {
     padding: 4px;
     display: flex;
     background-color: rgb(189, 179, 179);
@@ -146,24 +167,35 @@ tr {
 .pagin__btn {
     cursor: pointer;
     font-family: Roboto;
+    font-weight: 700;
     font-size: 36px;
     margin-right: 10px;
     padding: 3px;
-    background-color: none;
 }
 
 
-.text__wrapper {    
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    height: 36px;
-    text-align: left; 
+@media (max-width: 1200px) {
+    .page__container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .form {
+        width: 50%;
+    }
+
+    .form__out-area {
+        min-width: 200px;
+    }
+
+    .wrapper {
+
+
+        margin-bottom: 100px;
+    }
+    .table {
+
+    }
 }
 
-.table__color {
-    width: 80px;
-    height: 25px;
-}
+
