@@ -35,7 +35,7 @@ init();
 
 // Функция получения данных с сервера
 async function loadAllUsers() {
-  return fetch('http://localhost:3000/users').then(r => r.json());
+  return fetch('/.netlify/functions/db').then(r => r.json());
 }
 
 // Функция создания элементов таблицы
